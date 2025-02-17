@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/four_to_sixteen_decoder.v,1739232664,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/seven_seg_decoder.v,,four_to_sixteen_decoder,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/seven_seg_decoder.v,1739234759,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/slowerClkGen.v,,seven_seg_decoder,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/seven_seg_display.v,1739833615,verilog,,,,seven_seg_display,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/slowerClkGen.v,1739833192,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/upcounter.v,,slowerClkGen,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/upcounter.v,1739833438,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.srcs/sources_1/new/seven_seg_display.v,,upcounter,,,,,,,,

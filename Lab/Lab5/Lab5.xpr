@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/maxgr/Documents/ECE3300L/Lab/Lab4/Lab4.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/maxgr/Documents/ECE3300L/Lab/Lab5/Lab5.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="dba03133e5e045b69b1a16c13cc5d9f5"/>
+    <Option Name="Id" Val="315222c052474231b96fa9e657ca6ad3"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -59,7 +59,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="FeatureSet" Val="FeatureSet_Classic"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="1"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -92,12 +92,30 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/four_to_sixteen_decoder.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Lab4/Lab4.srcs/sources_1/new/four_to_sixteen_decoder.v"/>
+          <Attr Name="ImportTime" Val="1739232664"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/seven_seg_decoder.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Lab4/Lab4.srcs/sources_1/new/seven_seg_decoder.v"/>
+          <Attr Name="ImportTime" Val="1739234759"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/slowerClkGen.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/upcounter.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -106,6 +124,8 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/seven_seg_display.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Lab4/Lab4.srcs/sources_1/new/seven_seg_display.v"/>
+          <Attr Name="ImportTime" Val="1739231571"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -151,6 +171,8 @@
       <Filter Type="Utils"/>
       <File Path="$PSRCDIR/utils_1/imports/synth_1/seven_seg_display.dcp">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Lab4/Lab4.srcs/utils_1/imports/synth_1/seven_seg_display.dcp"/>
+          <Attr Name="ImportTime" Val="1739831452"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedInSteps" Val="synth_1"/>

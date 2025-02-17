@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/maxgr/Documents/ECE3300L/Lab/Lab4/Lab4.runs/synth_1'
+HD_PWD='C:/Users/maxgr/Documents/ECE3300L/Homework/OverflowDetection2023/OverflowDetection2023.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log seven_seg_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source seven_seg_display.tcl
+EAStep vivado -log adder_subtractor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adder_subtractor.tcl
