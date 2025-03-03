@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1740446258" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/seven_seg_display.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1741011304" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/seven_seg_display.dcp">
   <File Type="PA-TCL" Name="seven_seg_display.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="seven_seg_display_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="seven_seg_display_reports.tcl"/>

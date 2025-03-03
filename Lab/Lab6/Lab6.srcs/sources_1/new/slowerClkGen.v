@@ -40,7 +40,7 @@ module slowerClkGen(
         else
         begin
             counter_0 = counter_0 +1;
-            counter_1 = counter_0 +1;
+            counter_1 = counter_1 +1;
             if (counter_0 == 50_000_000) //why is this a 0.5 Hz?
                 begin
                 outsignal_0=~outsignal_0;
