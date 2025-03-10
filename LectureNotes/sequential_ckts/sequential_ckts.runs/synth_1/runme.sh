@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log gated_D_Latch.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gated_D_Latch.tcl
+EAStep vivado -log DTest.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source DTest.tcl
