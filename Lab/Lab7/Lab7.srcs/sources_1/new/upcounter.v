@@ -37,20 +37,31 @@
 //    end
 //endmodule
 
-module upcounter (Resetn, Clock, E, max, Q);
+module upcounter (Resetn, Clock, E, max, Q, carry);
     input Resetn, Clock, E;
     input [31:0] max;
     output reg [31:0] Q;
-    
+    output reg carry;
     always @(posedge Clock)
     begin
-        if (!Resetn | Q == max)
+        if (!Resetn)
         begin
             Q <= 0;
+            carry <= 0;
         end
         else if (E)
         begin
             Q <= Q + 1;
        end
+            
+        if(Q == max)
+        begin
+            Q <= 0;
+            carry <= 1;
+        end
+        if(Q == 0)
+        begin
+            carry <= 0;
+        end
     end
 endmodule
