@@ -19,45 +19,21 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module downcounter (Resetn, Set, Clock0, Clock1, E, max, Q);
-    input Resetn, Set, Clock0, Clock1, E;
-    input [31:0] max;
+module downcounter (Resetn, Clock, E, set_num, Q);
+    input Resetn, Clock, E;
+    input [31:0] set_num;
     output reg [31:0] Q;
     
-    reg clk_in;
-    
-    always @ (*)
+    always @(posedge Clock)
     begin
-        case(Set)
-            0: clk_in = Clock0;
-            1: clk_in = Clock1;
-        endcase
-    end
-    
-    always @(posedge clk_in)
-    begin
-        if(!Set)
-        begin
-            if (!Resetn)
+        if (!Resetn)
             begin
-                Q <= 0;
+                Q = set_num;
             end
             else if (E & Q > 0)
             begin
                 Q <= Q - 1;
            end
-        end
-        else
-        begin
-            if(Q == max)
-            begin
-                Q <= 0;
-            end
-            else
-            begin
-                Q <= Q + 1;
-            end
-        end
     end
     
 endmodule

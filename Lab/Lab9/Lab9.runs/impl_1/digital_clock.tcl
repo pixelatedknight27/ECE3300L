@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.runs/impl_1/digital_clock.tcl"
+  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.runs/impl_1/digital_clock.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -131,15 +132,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.cache/wt [current_project]
-  set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.xpr [current_project]
-  set_property ip_output_repo C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.cache/wt [current_project]
+  set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.xpr [current_project]
+  set_property ip_output_repo C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.runs/synth_1/digital_clock.dcp
+  add_files -quiet C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.runs/synth_1/digital_clock.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+  read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

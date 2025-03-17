@@ -44,7 +44,7 @@ module upcounter (Resetn, Clock, E, max, Q);
     
     always @(posedge Clock)
     begin
-        if (!Resetn | Q == max)
+        if (!Resetn)
         begin
             Q <= 0;
         end
@@ -52,5 +52,7 @@ module upcounter (Resetn, Clock, E, max, Q);
         begin
             Q <= Q + 1;
        end
+         if(Q == max)
+            Q <= 0;
     end
 endmodule

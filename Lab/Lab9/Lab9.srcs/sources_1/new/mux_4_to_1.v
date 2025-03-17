@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux_4_to_1(
+module mux_8_to_1(
     
-    input [1:0] sel,
+    input [2:0] sel,
 
     input [7:0] AN0,
     input [6:0] Cout0,
@@ -39,6 +39,22 @@ module mux_4_to_1(
     input [7:0] AN3,
     input [6:0] Cout3,
     input DP3,
+    
+    input [7:0] AN4,
+    input [6:0] Cout4,
+    input DP4,
+    
+    input [7:0] AN5,
+    input [6:0] Cout5,
+    input DP5,
+    
+    input [7:0] AN6,
+    input [6:0] Cout6,
+    input DP6,
+    
+    input [7:0] AN7,
+    input [6:0] Cout7,
+    input DP7,
     
     output reg [7:0] AN,
     output reg [6:0] Cout,
@@ -77,6 +93,33 @@ module mux_4_to_1(
             AN = AN3;
             Cout = Cout3;
             DP = DP3;
+        end
+        4:
+        begin
+            AN = AN4;
+            Cout = Cout4;
+            DP = DP4;
+        end
+        
+        5:
+        begin
+            AN = AN5;
+            Cout = Cout5;
+            DP = DP5;
+        end
+        
+        6:
+        begin
+            AN = AN6;
+            Cout = Cout6;
+            DP = DP6;
+        end
+        
+        7:
+        begin
+            AN = AN7;
+            Cout = Cout7;
+            DP = DP7;
         end
     endcase
     

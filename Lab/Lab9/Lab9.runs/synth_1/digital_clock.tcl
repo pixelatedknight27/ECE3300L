@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.runs/synth_1/digital_clock.tcl"
+  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.runs/synth_1/digital_clock.tcl"
   variable category "vivado_synth"
 }
 
@@ -72,27 +72,28 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.cache/wt [current_project]
-set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.cache/wt [current_project]
+set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.cache/ip [current_project]
+set_property ip_output_repo c:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/bcd_decoder.v
-  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/clk_gen.v
-  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/downcounter.v
-  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/mux_4_to_1.v
-  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/upcounter.v
-  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/digital_clock.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/sources_1/new/bcd_decoder.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/sources_1/new/clk_gen.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/sources_1/new/downcounter.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/sources_1/new/mux_4_to_1.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/sources_1/new/upcounter.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/sources_1/new/digital_clock.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -103,12 +104,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc]
+read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/utils_1/imports/synth_1/clk_gen.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab9/Lab9.srcs/utils_1/imports/synth_1/clk_gen.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
