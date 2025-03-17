@@ -89,6 +89,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/bcd_decoder.v
   C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/clk_gen.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/downcounter.v
   C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/mux_4_to_1.v
   C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/upcounter.v
   C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab7/Lab7.srcs/sources_1/new/digital_clock.v

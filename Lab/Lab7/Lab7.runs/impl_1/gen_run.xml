@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1741602249">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1742210854">
   <File Type="ROUTE-PWR" Name="digital_clock_power_routed.rpt"/>
   <File Type="PA-TCL" Name="digital_clock.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="digital_clock_power_summary_routed.pb"/>
@@ -56,13 +56,13 @@
   <File Type="ROUTE-BUS-SKEW-RPX" Name="digital_clock_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="digital_clock_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="digital_clock_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="digital_clock_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="digital_clock_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="digital_clock_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="digital_clock_bus_skew_postroute_physopted.rpt"/>
   <File Type="BG-BIT" Name="digital_clock.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="digital_clock_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="digital_clock_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="digital_clock.nky"/>
   <File Type="BITSTR-BMM" Name="digital_clock_bd.bmm"/>
   <File Type="PDI-FILE" Name="digital_clock.pdi"/>
@@ -94,6 +94,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/clk_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/downcounter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
