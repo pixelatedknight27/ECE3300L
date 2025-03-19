@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.runs/synth_1'
+HD_PWD='C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log digital_clock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source digital_clock.tcl
+EAStep vivado -log SongPlayer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SongPlayer.tcl

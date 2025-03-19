@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.runs/impl_1/digital_clock.tcl"
+  variable script "C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.runs/impl_1/SongPlayer.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,6 +123,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
@@ -130,21 +131,21 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.cache/wt [current_project]
-  set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.xpr [current_project]
-  set_property ip_output_repo C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.cache/wt [current_project]
+  set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.xpr [current_project]
+  set_property ip_output_repo C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.runs/synth_1/digital_clock.dcp
+  add_files -quiet C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.runs/synth_1/SongPlayer.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/maxgr/Documents/ECE3300L/Lab/Lab9/Lab9.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+  read_xdc C:/Users/maxgr/Documents/ECE3300L/Lab/Music/Music.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top digital_clock -part xc7a100tcsg324-1 
+  link_design -top SongPlayer -part xc7a100tcsg324-1 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
@@ -176,10 +177,10 @@ OPTRACE "opt_design" END { }
 OPTRACE "read constraints: opt_design_post" START { }
 OPTRACE "read constraints: opt_design_post" END { }
 OPTRACE "opt_design reports" START { REPORT }
-  create_report "impl_1_opt_report_drc_0" "report_drc -file digital_clock_drc_opted.rpt -pb digital_clock_drc_opted.pb -rpx digital_clock_drc_opted.rpx"
+  create_report "impl_1_opt_report_drc_0" "report_drc -file SongPlayer_drc_opted.rpt -pb SongPlayer_drc_opted.pb -rpx SongPlayer_drc_opted.rpx"
 OPTRACE "opt_design reports" END { }
 OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force digital_clock_opt.dcp
+  write_checkpoint -force SongPlayer_opt.dcp
 OPTRACE "Opt Design: write_checkpoint" END { }
   close_msg_db -file opt_design.pb
 } RESULT]
@@ -210,12 +211,12 @@ OPTRACE "place_design" END { }
 OPTRACE "read constraints: place_design_post" START { }
 OPTRACE "read constraints: place_design_post" END { }
 OPTRACE "place_design reports" START { REPORT }
-  create_report "impl_1_place_report_io_0" "report_io -file digital_clock_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file digital_clock_utilization_placed.rpt -pb digital_clock_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file digital_clock_control_sets_placed.rpt"
+  create_report "impl_1_place_report_io_0" "report_io -file SongPlayer_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file SongPlayer_utilization_placed.rpt -pb SongPlayer_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file SongPlayer_control_sets_placed.rpt"
 OPTRACE "place_design reports" END { }
 OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force digital_clock_placed.dcp
+  write_checkpoint -force SongPlayer_placed.dcp
 OPTRACE "Place Design: write_checkpoint" END { }
   close_msg_db -file place_design.pb
 } RESULT]
@@ -243,7 +244,7 @@ OPTRACE "read constraints: phys_opt_design_post" END { }
 OPTRACE "phys_opt_design report" START { REPORT }
 OPTRACE "phys_opt_design report" END { }
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force digital_clock_physopt.dcp
+  write_checkpoint -force SongPlayer_physopt.dcp
 OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
   close_msg_db -file phys_opt_design.pb
 } RESULT]
@@ -269,17 +270,17 @@ OPTRACE "route_design" END { }
 OPTRACE "read constraints: route_design_post" START { }
 OPTRACE "read constraints: route_design_post" END { }
 OPTRACE "route_design reports" START { REPORT }
-  create_report "impl_1_route_report_drc_0" "report_drc -file digital_clock_drc_routed.rpt -pb digital_clock_drc_routed.pb -rpx digital_clock_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file digital_clock_methodology_drc_routed.rpt -pb digital_clock_methodology_drc_routed.pb -rpx digital_clock_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file digital_clock_power_routed.rpt -pb digital_clock_power_summary_routed.pb -rpx digital_clock_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file digital_clock_route_status.rpt -pb digital_clock_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -report_unconstrained -file digital_clock_timing_summary_routed.rpt -pb digital_clock_timing_summary_routed.pb -rpx digital_clock_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file digital_clock_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file digital_clock_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file digital_clock_bus_skew_routed.rpt -pb digital_clock_bus_skew_routed.pb -rpx digital_clock_bus_skew_routed.rpx"
+  create_report "impl_1_route_report_drc_0" "report_drc -file SongPlayer_drc_routed.rpt -pb SongPlayer_drc_routed.pb -rpx SongPlayer_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file SongPlayer_methodology_drc_routed.rpt -pb SongPlayer_methodology_drc_routed.pb -rpx SongPlayer_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file SongPlayer_power_routed.rpt -pb SongPlayer_power_summary_routed.pb -rpx SongPlayer_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file SongPlayer_route_status.rpt -pb SongPlayer_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -report_unconstrained -file SongPlayer_timing_summary_routed.rpt -pb SongPlayer_timing_summary_routed.pb -rpx SongPlayer_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file SongPlayer_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file SongPlayer_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file SongPlayer_bus_skew_routed.rpt -pb SongPlayer_bus_skew_routed.pb -rpx SongPlayer_bus_skew_routed.rpx"
 OPTRACE "route_design reports" END { }
 OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force digital_clock_routed.dcp
+  write_checkpoint -force SongPlayer_routed.dcp
 OPTRACE "Route Design: write_checkpoint" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
@@ -287,7 +288,7 @@ OPTRACE "route_design misc" START { }
 if {$rc} {
 OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
 OPTRACE "route_design write_checkpoint" END { }
-  write_checkpoint -force digital_clock_routed_error.dcp
+  write_checkpoint -force SongPlayer_routed_error.dcp
   step_failed route_design
   return -code error $RESULT
 } else {
@@ -305,16 +306,16 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  catch { write_mem_info -force -no_partial_mmi digital_clock.mmi }
+  catch { write_mem_info -force -no_partial_mmi SongPlayer.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force digital_clock.bit 
+  write_bitstream -force SongPlayer.bit 
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
-  catch {write_debug_probes -quiet -force digital_clock}
-  catch {file copy -force digital_clock.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force SongPlayer}
+  catch {file copy -force SongPlayer.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
