@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sim_1/new/TFlipFlopSim.v,1742366657,verilog,,,,TFlipFlopSim,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sim_1/new/UpDownCounterSim.v,1742369196,verilog,,,,UpDownCounterSim,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sources_1/new/CounterStage.v,1742368588,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sources_1/new/TFlipFlop.v,,CounterStage,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sources_1/new/TFlipFlop.v,1742366495,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sources_1/new/UpDownCounter.v,,TFlipFlop,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sources_1/new/UpDownCounter.v,1742368944,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/UpCounter/UpCounter.srcs/sim_1/new/UpDownCounterSim.v,,UpDownCounter,,,,,,,,
