@@ -51,7 +51,14 @@ module digital_clock(
     upcounter rgb_ctr(1, outsignal_1HZ, 1, ~32'd0, rgb_ctr_Q);
     
     upcounter set_ctr(~set_ctr_reset, outsignal_400HZ, set_ctr_enable, 32'd3600, set_ctr_Q);
-    downcounter sec_ctr(~set_sw, outsignal_1HZ, 1, set_ctr_Q, sec_ctr_Q);
+    upcounter clk_ctr(~set_sw, outsignal_1HZ, 1, 32'd3600, sec_ctr_Q);
+    
+    wire [31:0] five_sec;
+    
+    reg down_ctr_enable;
+    
+    downcounter sec_ctr(~down_ctr_enable, outsignal_1HZ, 1, 32'd5, five_sec);
+    
     
     wire [6:0] Cout0, Cout1, Cout2, Cout3, Cout4, Cout5, Cout6, Cout7;
     wire DP0, DP1, DP2, DP3, DP4, DP5, DP6, DP7;
@@ -82,9 +89,14 @@ module digital_clock(
     
     assign alarm_enable_out = alarm_enable;
     
-    always @ (sec_ctr_Q, rgb_ctr_Q, outsignal_400HZ)
+    always @ (sec_ctr_Q, rgb_ctr_Q, outsignal_400HZ, five_sec)
     begin
-        if(sec_ctr_Q == 0 & alarm_enable)
+        if(sec_ctr_Q == set_ctr_Q)
+            down_ctr_enable = 1;
+        else
+            down_ctr_enable = 0;
+    
+        if(five_sec != 32'b0 & alarm_enable)
         begin
             audio_pwm = outsignal_400HZ;
             rgb_led0 = rgb_ctr_Q[2:0];

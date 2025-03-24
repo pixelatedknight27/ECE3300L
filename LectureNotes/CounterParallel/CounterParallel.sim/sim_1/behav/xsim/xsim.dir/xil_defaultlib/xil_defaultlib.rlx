@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/maxgr/Documents/ECE3300L/LectureNotes/CounterParallel/CounterParallel.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/LectureNotes/CounterParallel/CounterParallel.srcs/sim_1/new/CounterSim.v,1742417169,verilog,,,,CounterSim,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/LectureNotes/CounterParallel/CounterParallel.srcs/sources_1/new/CounterStage.v,1742418108,verilog,,C:/Users/maxgr/Documents/ECE3300L/LectureNotes/CounterParallel/CounterParallel.srcs/sources_1/new/ModuloCounter.v,,CounterStage,,,,,,,,
+C:/Users/maxgr/Documents/ECE3300L/LectureNotes/CounterParallel/CounterParallel.srcs/sources_1/new/ModuloCounter.v,1742418457,verilog,,C:/Users/maxgr/Documents/ECE3300L/LectureNotes/CounterParallel/CounterParallel.srcs/sim_1/new/CounterSim.v,,ModuloCounter,,,,,,,,
