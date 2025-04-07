@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../EdgeDetection.srcs/sources_1/new/db_fsm.v" \
+"../../../../EdgeDetection.srcs/sim_1/new/db_fsm_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,9 +1,0 @@
-0.7
-2020.2
-Oct 13 2023
-20:47:58
-C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sim_1/new/edge_detection_sim.v,1742856072,verilog,,,,edge_detection_sim,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sources_1/new/edge_detect_mealy.v,1742853714,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sources_1/new/edge_detect_moore.v,,edge_detect_mealy,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sources_1/new/edge_detect_moore.v,1742853680,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sources_1/new/edge_detection.v,,edge_detect_moore,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sources_1/new/edge_detection.v,1742855510,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab10/EdgeDetection/EdgeDetection.srcs/sim_1/new/edge_detection_sim.v,,edge_detection,,,,,,,,
