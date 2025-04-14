@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11/Lab11.runs/synth_1'
+HD_PWD='C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11/Lab11.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log VGA_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_top.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log VGA_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGA_top.tcl -notrace
+
+

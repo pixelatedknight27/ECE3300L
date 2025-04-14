@@ -21,7 +21,7 @@
 
 
 module shiftright (rst, R, L, E, w, Clock, Q);
-    parameter n = 4;
+    parameter n = 8;
     input [n-1:0] R;
     input rst, L, E, w, Clock;
     output reg [n-1:0] Q;

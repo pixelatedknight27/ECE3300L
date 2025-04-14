@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -87,6 +89,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/counter.v
   C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/shiftright.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/slowerClkGen.v
   C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/bit_counter.v
 }
 OPTRACE "Adding files" END { }

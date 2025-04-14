@@ -21,11 +21,11 @@
 
 
 module counter_sim;
-    parameter n = 2;
+    parameter n = 8;
     
     reg rst = 0, L = 0, E = 0, Clock = 0;
     
-    wire [n-1:0] Q;
+    wire [$clog2(n)-1:0] Q;
     
     bit_counter uut(rst, L, E, Clock, Q);
     

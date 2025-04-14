@@ -21,12 +21,13 @@
 
 
 module bit_counter_sim;
-    parameter n = 4;
+    parameter n = 8;
     reg rst = 0, Clock = 0, Load = 0, Enable = 0;
     reg [n-1:0] Qin = 4'd5;
     wire [$clog2(n) - 1:0] Qout;
+    wire Done;
     
-    bit_counter uut(rst, Clock, Qin, Load, Enable, Qout);
+    bit_counter uut(rst, Clock, Qin, Load, Enable, Qout, Done);
     
     initial begin
         #1 Clock = 0; 

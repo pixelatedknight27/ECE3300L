@@ -21,7 +21,7 @@
 
 
 module counter(rst, L, E, Clock, Q);
-    parameter n = 4;
+    parameter n = 8;
     input rst;
     input L, E, Clock;
     output reg [$clog2(n)-1:0] Q;

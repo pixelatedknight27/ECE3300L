@@ -3,9 +3,9 @@
 Oct 13 2023
 20:47:58
 C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sim_1/new/bit_counter_sim.v,1744592708,verilog,,,,bit_counter_sim,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sim_1/new/bit_counter_sim.v,1744594163,verilog,,,,bit_counter_sim,,,,,,,,
 C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sim_1/new/counter_sim.v,1744590581,verilog,,,,counter_sim,,,,,,,,
 C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sim_1/new/shiftright_sim.v,1744588576,verilog,,,,shiftright_sim,,,,,,,,
-C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/bit_counter.v,1744592258,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/counter.v,,bit_counter,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/bit_counter.v,1744597950,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/counter.v,,bit_counter,,,,,,,,
 C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/counter.v,1744591647,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/shiftright.v,,counter,,,,,,,,
 C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sources_1/new/shiftright.v,1744591429,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/BitCounter/BitCounter.srcs/sim_1/new/bit_counter_sim.v,,shiftright,,,,,,,,

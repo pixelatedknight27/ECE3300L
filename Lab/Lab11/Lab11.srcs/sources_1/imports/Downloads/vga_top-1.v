@@ -15,19 +15,19 @@ module VGA_top(
    wire clk_50m;
    clk_50m_generator myclk(clk, reset_clk, clk_50m);
 
-//   vga_sync vsync_unit
+   vga_sync vsync_unit
+      (.clk(clk_50m), .reset(reset), .hsync(hsync), .vsync(vsync),
+       .video_on(video_on), .p_tick(pixel_tick),
+       .pixel_x(pixel_x), .pixel_y(pixel_y));
+   // instantiate graphic generator
+   pong_graph_st pong_grf_unit
+      (.video_on(video_on), .pix_x(pixel_x), .pix_y(pixel_y),
+       .graph_rgb(rgb_next));
+       
+//    vga_test vga_test_unit
 //      (.clk(clk_50m), .reset(reset), .hsync(hsync), .vsync(vsync),
 //       .video_on(video_on), .p_tick(pixel_tick),
 //       .pixel_x(pixel_x), .pixel_y(pixel_y));
-//   // instantiate graphic generator
-//   pong_graph_st pong_grf_unit
-//      (.video_on(video_on), .pix_x(pixel_x), .pix_y(pixel_y),
-//       .graph_rgb(rgb_next));
-       
-       vga_test vga_test_unit
-          (.clk(clk_50m), .reset(reset), .hsync(hsync), .vsync(vsync),
-           .video_on(video_on), .p_tick(pixel_tick),
-           .pixel_x(pixel_x), .pixel_y(pixel_y));
        
    // rgb buffer
    always @(posedge clk_50m)

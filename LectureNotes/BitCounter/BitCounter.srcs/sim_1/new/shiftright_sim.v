@@ -21,9 +21,9 @@
 
 
 module shiftright_sim;
-    parameter n = 4;
+    parameter n = 8;
     
-    reg [n-1:0] R = 4'b0101;
+    reg [n-1:0] R = 8'd5;
     reg L = 0, E = 0, w = 0, Clock = 0;
     
     wire [n-1:0] Q;
