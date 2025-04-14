@@ -4,10 +4,10 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11/Lab11.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="db69880f2644409db06fdeea31034bd1"/>
+    <Option Name="Id" Val="9711c11321f54390afe7ec430093df23"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -90,108 +90,113 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_01_vga_sync.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_01_vga_sync.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_03_pong_graph_st.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_03_pong_graph_st.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_04_pong_top_st.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_04_pong_top_st.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/Downloads/clk_50m_generator-1.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/clk_50m_generator-1.v"/>
-          <Attr Name="ImportTime" Val="1744063651"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/clk_50m_generator-1.v"/>
+          <Attr Name="ImportTime" Val="1744615404"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_07_bitmap_gen.v">
+      <File Path="$PSRCDIR/sources_1/imports/Downloads/list_ch13_01_vga_sync.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_07_bitmap_gen.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/list_ch13_01_vga_sync.v"/>
+          <Attr Name="ImportTime" Val="1744615053"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_08_dot_top.v">
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_01_font_rom.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_08_dot_top.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_01_font_rom.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_05_ pong_graph_animate.v">
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_06_pong_text.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_05_ pong_graph_animate.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_06_pong_text.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_06_pong_top_an.v">
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_07_pong_graph.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_06_pong_top_an.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_07_pong_graph.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_02_vga_test.v">
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_08_m100_counter.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_02_vga_test.v"/>
-          <Attr Name="ImportTime" Val="1744230305"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_08_m100_counter.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Downloads/list_ch06_02_debounce.v">
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_09_timer.v">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/list_ch06_02_debounce.v"/>
-          <Attr Name="ImportTime" Val="1744615587"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_09_timer.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/Downloads/list_ch12_04_xilinx_dual_port_ram_sync.v">
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_10_pong_top.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_10_pong_top.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_02_font_test_gen.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/list_ch12_04_xilinx_dual_port_ram_sync.v"/>
-          <Attr Name="ImportTime" Val="1744615597"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_02_font_test_gen.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_03_font_test_top.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_03_font_test_top.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_04_text_screen_gen.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_04_text_screen_gen.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_05_text_screen_top.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_05_text_screen_top.v"/>
+          <Attr Name="ImportTime" Val="1744614966"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -199,7 +204,8 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="pong_top_st"/>
+        <Option Name="TopModule" Val="pong_top"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -220,7 +226,7 @@
       <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="dot_top"/>
+        <Option Name="TopModule" Val="pong_top"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
@@ -235,10 +241,11 @@
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
-      <File Path="$PSRCDIR/utils_1/imports/synth_1/VGA_top.dcp">
+      <File Path="$PSRCDIR/utils_1/imports/synth_1/pong_top.dcp">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="synth_1"/>
           <Attr Name="AutoDcp" Val="1"/>
         </FileInfo>
       </File>
@@ -266,7 +273,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="21">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pong_top.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>

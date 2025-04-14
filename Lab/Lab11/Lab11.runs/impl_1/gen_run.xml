@@ -1,100 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744596086">
-  <File Type="ROUTE-PWR" Name="VGA_top_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="VGA_top.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="VGA_top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="VGA_top_reports.tcl"/>
-  <File Type="OPT-RQA-PB" Name="VGA_top_rqa_opted.pb"/>
-  <File Type="BITSTR-MMI" Name="VGA_top.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="VGA_top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="VGA_top_timing_summary_init.rpt"/>
-  <File Type="OPT-TIMING" Name="VGA_top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="VGA_top_opt.dcp"/>
-  <File Type="OPT-DRC" Name="VGA_top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="VGA_top.hwdef"/>
-  <File Type="PWROPT-DCP" Name="VGA_top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="VGA_top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="VGA_top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="VGA_top_placed.dcp"/>
-  <File Type="PLACE-IO" Name="VGA_top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="VGA_top_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="VGA_top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="VGA_top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="VGA_top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="VGA_top_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="VGA_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="VGA_top.bin"/>
-  <File Type="PLACE-TIMING" Name="VGA_top_timing_summary_placed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="VGA_top_power_routed.rpx"/>
-  <File Type="PLACE-RQA-PB" Name="VGA_top_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="VGA_top_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="VGA_top.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="VGA_top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="VGA_top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="VGA_top_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="VGA_top.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="VGA_top_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="VGA_top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="VGA_top_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="VGA_top_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="VGA_top_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="VGA_top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="VGA_top_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="VGA_top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="VGA_top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="VGA_top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-RQS-PB" Name="VGA_top_rqs_routed.pb"/>
-  <File Type="ROUTE-STATUS" Name="VGA_top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="VGA_top_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="VGA_top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="VGA_top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="VGA_top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="VGA_top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="VGA_top_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="VGA_top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="VGA_top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="VGA_top_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="VGA_top_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="VGA_top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="VGA_top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="VGA_top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="VGA_top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="VGA_top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="VGA_top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="VGA_top_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="VGA_top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="VGA_top.nky"/>
-  <File Type="BITSTR-BMM" Name="VGA_top_bd.bmm"/>
-  <File Type="PDI-FILE" Name="VGA_top.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="VGA_top_boot.pdi"/>
-  <File Type="PL-PDI-FILE" Name="VGA_top_pld.pdi"/>
-  <File Type="RCFI_FILE" Name="VGA_top.rcfi"/>
-  <File Type="CFI_FILE" Name="VGA_top.cfi"/>
-  <File Type="RNPI_FILE" Name="VGA_top.rnpi"/>
-  <File Type="NPI_FILE" Name="VGA_top.npi"/>
-  <File Type="RBD_FILE" Name="VGA_top.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744614461">
+  <File Type="ROUTE-PWR" Name="pong_top_st_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="pong_top_st.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="pong_top_st_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="pong_top_st_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="pong_top_st.msk"/>
+  <File Type="ROUTE-CLK" Name="pong_top_st_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="pong_top_st.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="pong_top_st_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="pong_top_st.bit"/>
+  <File Type="BG-DRC" Name="pong_top_st.drc"/>
+  <File Type="BG-BGN" Name="pong_top_st.bgn"/>
+  <File Type="BG-BIN" Name="pong_top_st.bin"/>
+  <File Type="BITSTR-RBT" Name="pong_top_st.rbt"/>
+  <File Type="BITSTR-NKY" Name="pong_top_st.nky"/>
+  <File Type="BITSTR-BMM" Name="pong_top_st_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="pong_top_st.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="pong_top_st_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="pong_top_st.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="VGA_top.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="VGA_top.sysdef"/>
-  <File Type="BG-BGN" Name="VGA_top.bgn"/>
-  <File Type="BG-DRC" Name="VGA_top.drc"/>
-  <File Type="RDI-RDI" Name="VGA_top.vdi"/>
+  <File Type="BITSTR-LTX" Name="pong_top_st.ltx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="VGA_top_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="VGA_top_postroute_physopted.rqs"/>
+  <File Type="OPT-DRC" Name="pong_top_st_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="pong_top_st.hwdef"/>
+  <File Type="PLACE-IO" Name="pong_top_st_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="pong_top_st_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="pong_top_st_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="pong_top_st_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="pong_top_st_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="pong_top_st_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="pong_top_st_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="pong_top_st_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="pong_top_st_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="pong_top_st_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="pong_top_st_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="pong_top_st_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="pong_top_st_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="pong_top_st_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="pong_top_st_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="pong_top_st_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="pong_top_st_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="pong_top_st_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="pong_top_st_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="pong_top_st_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="pong_top_st_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="pong_top_st_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="pong_top_st_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="pong_top_st_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="pong_top_st_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="pong_top_st_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pong_top_st_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="pong_top_st_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="pong_top_st_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="pong_top_st_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="pong_top_st_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="pong_top_st_bus_skew_postroute_physopted.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pong_top_st_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="pong_top_st_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pong_top_st_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="pong_top_st.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="pong_top_st_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="pong_top_st_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="pong_top_st.rcfi"/>
+  <File Type="CFI_FILE" Name="pong_top_st.cfi"/>
+  <File Type="RNPI_FILE" Name="pong_top_st.rnpi"/>
+  <File Type="NPI_FILE" Name="pong_top_st.npi"/>
+  <File Type="RBD_FILE" Name="pong_top_st.rbd"/>
+  <File Type="ROUTE-RQS" Name="pong_top_st_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="pong_top_st_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/clk_50m_generator-1.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/clk_50m_generator-1.v"/>
-        <Attr Name="ImportTime" Val="1744063651"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_01_vga_sync.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_01_vga_sync.v"/>
@@ -104,26 +81,74 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../../Downloads/list_ch14_07_pong_graph.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_04_pong_top_st.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_04_pong_top_st.v"/>
+        <Attr Name="ImportTime" Val="1744230305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../../../../Downloads/pong_graph_st.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Downloads/vga_top-1.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/vga_top-1.v"/>
-        <Attr Name="ImportTime" Val="1744063669"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_02_vga_test.v">
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/clk_50m_generator-1.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_02_vga_test.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/clk_50m_generator-1.v"/>
+        <Attr Name="ImportTime" Val="1744063651"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/list_ch06_02_debounce.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/list_ch06_02_debounce.v"/>
+        <Attr Name="ImportTime" Val="1744615587"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/list_ch12_04_xilinx_dual_port_ram_sync.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/list_ch12_04_xilinx_dual_port_ram_sync.v"/>
+        <Attr Name="ImportTime" Val="1744615597"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_07_bitmap_gen.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_07_bitmap_gen.v"/>
+        <Attr Name="ImportTime" Val="1744230305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_08_dot_top.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_08_dot_top.v"/>
         <Attr Name="ImportTime" Val="1744230305"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -150,6 +175,26 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/vga_top-1.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/vga_top-1.v"/>
+        <Attr Name="ImportTime" Val="1744063669"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_02_vga_test.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_02_vga_test.v"/>
+        <Attr Name="ImportTime" Val="1744230305"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_03_pong_graph_st.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -160,40 +205,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_04_pong_top_st.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_04_pong_top_st.v"/>
-        <Attr Name="ImportTime" Val="1744230305"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_08_dot_top.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_08_dot_top.v"/>
-        <Attr Name="ImportTime" Val="1744230305"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_07_bitmap_gen.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/barbedo verilog-book master files-book_code_listing_ch13/list_ch13_07_bitmap_gen.v"/>
-        <Attr Name="ImportTime" Val="1744230305"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="VGA_top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="pong_top_st"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -217,9 +231,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -229,5 +241,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
