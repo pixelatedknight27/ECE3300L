@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.runs/synth_1/pong_top.tcl"
+  variable script "C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.runs/synth_1/divider.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,30 +71,22 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.cache/wt [current_project]
-set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.cache/wt [current_project]
+set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.cache/ip [current_project]
+set_property ip_output_repo c:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib {
-  C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/Downloads/clk_50m_generator-1.v
-  C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/Downloads/list_ch13_01_vga_sync.v
-  {C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_01_font_rom.v}
-  {C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_06_pong_text.v}
-  {C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_07_pong_graph.v}
-  {C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_08_m100_counter.v}
-  {C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_09_timer.v}
-  {C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/sources_1/imports/barbedo verilog-book master files-book_code_listing_ch14/list_ch14_10_pong_top.v}
-}
+read_verilog -library xil_defaultlib C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.srcs/sources_1/new/Divider.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -104,14 +96,16 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc]
+read_xdc C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/maxgr/Documents/ECE3300L/LectureNotes/Divider/Divider.srcs/utils_1/imports/synth_1/Divider.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top pong_top -part xc7a100tcsg324-1
+synth_design -top divider -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -121,10 +115,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef pong_top.dcp
+write_checkpoint -force -noxdef divider.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file pong_top_utilization_synth.rpt -pb pong_top_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file divider_utilization_synth.rpt -pb divider_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
