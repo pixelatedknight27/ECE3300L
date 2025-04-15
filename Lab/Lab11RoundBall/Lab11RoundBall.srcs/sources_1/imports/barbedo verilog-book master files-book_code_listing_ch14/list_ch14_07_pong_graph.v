@@ -18,20 +18,20 @@ module pong_graph
    //--------------------------------------------
    // vertical strip as a wall
    //--------------------------------------------
-   // wall left, right boundary
-   localparam WALL_X_L = 32;
-   localparam WALL_X_R = 35;
+   // wall top,bottom boundary
+   localparam WALL_Y_T = 32;
+   localparam WALL_Y_B = 35;
    //--------------------------------------------
    // right vertical bar
    //--------------------------------------------
-   // bar left, right boundary
-   localparam BAR_X_L = 600;
-   localparam BAR_X_R = 603;
    // bar top, bottom boundary
-   wire [9:0] bar_y_t, bar_y_b;
-   localparam BAR_Y_SIZE = 72;
+   localparam BAR_Y_T = 446;
+   localparam BAR_Y_B = 449;
+   // bar left, right boundary
+   wire [9:0] bar_x_l, bar_x_r;
+   localparam BAR_X_SIZE = 72;
    // register to track top boundary  (x position is fixed)
-   reg [9:0] bar_y_reg, bar_y_next;
+   reg [9:0] bar_x_reg, bar_x_next;
    // bar moving velocity when the button are pressed
    localparam BAR_V = 4;
    //--------------------------------------------
@@ -69,21 +69,21 @@ module pong_graph
    //--------------------------------------------
    always @*
    case (rom_addr)
-      3'h0: rom_data = 8'b00111100; //   ****
-      3'h1: rom_data = 8'b01111110; //  ******
-      3'h2: rom_data = 8'b11111111; // ********
-      3'h3: rom_data = 8'b11111111; // ********
-      3'h4: rom_data = 8'b11111111; // ********
-      3'h5: rom_data = 8'b11111111; // ********
-      3'h6: rom_data = 8'b01111110; //  ******
-      3'h7: rom_data = 8'b00111100; //   ****
+      3'h0: rom_data = 8'b00010000; //   ****
+      3'h1: rom_data = 8'b00111000; //  ******
+      3'h2: rom_data = 8'b00111000; // ********
+      3'h3: rom_data = 8'b11111110; // ********
+      3'h4: rom_data = 8'b00111000; // ********
+      3'h5: rom_data = 8'b01101100; // ********
+      3'h6: rom_data = 8'b11000110; //  ******
+      3'h7: rom_data = 8'b10000010; //   ****
    endcase
    
    // registers
    always @(posedge clk, posedge reset)
       if (reset)
          begin
-            bar_y_reg <= 0;
+            bar_x_reg <= 0;
             ball_x_reg <= 0;
             ball_y_reg <= 0;
             x_delta_reg <= 10'h004;
@@ -91,7 +91,7 @@ module pong_graph
          end   
       else
          begin
-            bar_y_reg <= bar_y_next;
+            bar_x_reg <= bar_x_next;
             ball_x_reg <= ball_x_next;
             ball_y_reg <= ball_y_next;
             x_delta_reg <= x_delta_next;
@@ -106,7 +106,7 @@ module pong_graph
    // (wall) left vertical strip
    //--------------------------------------------
    // pixel within wall
-   assign wall_on = (WALL_X_L<=pix_x) && (pix_x<=WALL_X_R);
+   assign wall_on = (WALL_Y_T<=pix_y) && (pix_y<=WALL_Y_B);
    // wall rgb output
    assign wall_rgb = 3'b001; // blue
 
@@ -114,24 +114,24 @@ module pong_graph
    // right vertical bar
    //--------------------------------------------
    // boundary
-   assign bar_y_t = bar_y_reg;
-   assign bar_y_b = bar_y_t + BAR_Y_SIZE - 1;
+   assign bar_x_l = bar_x_reg;
+   assign bar_x_r = bar_x_l + BAR_X_SIZE - 1;
    // pixel within bar
-   assign bar_on = (BAR_X_L<=pix_x) && (pix_x<=BAR_X_R) &&
-                   (bar_y_t<=pix_y) && (pix_y<=bar_y_b); 
+   assign bar_on = (BAR_Y_T<=pix_y) && (pix_y<=BAR_Y_B) &&
+                   (bar_x_l<=pix_x) && (pix_x<=bar_x_r); 
    // bar rgb output
    assign bar_rgb = 3'b010; // green
    // new bar y-position
    always @*
    begin
-      bar_y_next = bar_y_reg; // no move
+      bar_x_next = bar_x_reg; // no move
       if (gra_still) // initial position of paddle
-         bar_y_next = (MAX_Y-BAR_Y_SIZE)/2;
+         bar_x_next = (MAX_X-BAR_X_SIZE)/2;
       else if (refr_tick)
-         if (btn[1] & (bar_y_b < (MAX_Y-1-BAR_V)))
-            bar_y_next = bar_y_reg + BAR_V; // move down
-         else if (btn[0] & (bar_y_t > BAR_V)) 
-            bar_y_next = bar_y_reg - BAR_V; // move up
+         if (btn[1] & (bar_x_r < (MAX_X-1-BAR_V)))
+            bar_x_next = bar_x_reg + BAR_V; // move down
+         else if (btn[0] & (bar_x_l > BAR_V)) 
+            bar_x_next = bar_x_reg - BAR_V; // move up
    end 
 
    //--------------------------------------------
@@ -174,20 +174,20 @@ module pong_graph
             x_delta_next = BALL_V_N;
             y_delta_next = BALL_V_P;
          end   
-      else if (ball_y_t < 1) // reach top
-         y_delta_next = BALL_V_P;
-      else if (ball_y_b > (MAX_Y-1)) // reach bottom
-         y_delta_next = BALL_V_N;
-      else if (ball_x_l <= WALL_X_R) // reach wall
-         x_delta_next = BALL_V_P;    // bounce back
-      else if ((BAR_X_L<=ball_x_r) && (ball_x_r<=BAR_X_R) &&
-               (bar_y_t<=ball_y_b) && (ball_y_t<=bar_y_b))
+      else if (ball_x_l < 1) // reach left
+         x_delta_next = BALL_V_P;
+      else if (ball_x_l > (MAX_X-1)) // reach right
+         x_delta_next = BALL_V_N;
+      else if (ball_y_t <= WALL_Y_B) // reach wall
+         y_delta_next = BALL_V_P;    // bounce back
+      else if ((bar_x_l<=ball_x_r) && (ball_x_r<=bar_x_r) &&
+               (BAR_Y_T<=ball_y_b) && (ball_y_t<=BAR_Y_B))
          begin
             // reach x of right bar and hit, ball bounce back
-            x_delta_next = BALL_V_N;  
+            y_delta_next = BALL_V_N;  
             hit = 1'b1;
          end
-      else if (ball_x_r>MAX_X)   // reach right border
+      else if (ball_y_b>MAX_Y)   // reach right border
          miss = 1'b1;            // a miss       
    end 
 
