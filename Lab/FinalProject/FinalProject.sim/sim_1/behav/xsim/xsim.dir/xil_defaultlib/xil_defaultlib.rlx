@@ -2,8 +2,7 @@
 2020.2
 Oct 13 2023
 20:47:58
-C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sim_1/new/CordicSim.v,1745441812,verilog,,,,CordicSim,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/Cordic.v,1745439814,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/CordicN.v,,Cordic,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/Cordic16.v,1745437189,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sim_1/new/CordicSim.v,,Cordic16,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/CordicN.v,1745442938,verilog,,C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/sim_1/new/CordicSim.v,,CordicN,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.sim/sim_1/behav/xsim/glbl.v,1746413056,verilog,,,,glbl,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.srcs/sim_1/new/CordicSim.v,1746440838,verilog,,,,CordicSim,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/Cordic.v,1746413056,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/CordicN.v,,Cordic,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.srcs/sources_1/new/CordicN.v,1746442158,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.srcs/sim_1/new/CordicSim.v,,CordicN,,,,,,,,

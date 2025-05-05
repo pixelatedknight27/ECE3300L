@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745281466">
-  <File Type="PA-TCL" Name="Cordic.tcl"/>
-  <File Type="REPORTS-TCL" Name="Cordic_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Cordic.vds"/>
-  <File Type="RDS-UTIL" Name="Cordic16_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Cordic16_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Cordic.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1746447541" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/CordicN.dcp">
+  <File Type="PA-TCL" Name="FinalProject.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="FinalProject_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="FinalProject_reports.tcl"/>
+  <File Type="RDS-RDS" Name="FinalProject.vds"/>
+  <File Type="RDS-UTIL" Name="FinalProject_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="FinalProject_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="FinalProject.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="FinalProject_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="FinalProject_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/Cordic.v">
@@ -15,10 +18,56 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/CordicAnim.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CordicN.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/clk_50m_generator-1.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/clk_50m_generator-1.v"/>
+        <Attr Name="ImportTime" Val="1744615404"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/list_ch13_01_vga_sync.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/list_ch13_01_vga_sync.v"/>
+        <Attr Name="ImportTime" Val="1744615053"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FinalProject.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Cordic16.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Cordic"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="FinalProject"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -37,6 +86,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/CordicN.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
