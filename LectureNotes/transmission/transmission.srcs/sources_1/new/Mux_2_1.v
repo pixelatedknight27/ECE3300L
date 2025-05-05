@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 04/16/2025 02:23:16 PM
+// Create Date: 04/20/2025 07:47:37 PM
 // Design Name: 
-// Module Name: ParodyFSM
+// Module Name: Mux_2_1
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,17 +19,12 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
- module ParodyFSM(reset, clk, Qin, Qout);
-    input reset;
-    input clk;
-    input Qin;
-    output reg Qout;
+
+module Mux_2_1(in, sel, out);
+    input [1:0] in;
+    input sel;
+    output out;
     
-    always @(posedge clk)
-    begin
-        if(~reset)
-            Qout = 0;
-        else
-            Qout <= Qout ^ Qin;
-    end
+    assign out = in[sel];
+    
 endmodule

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.runs/impl_1/pong_top.tcl"
+  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.runs/impl_1/pong_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -123,8 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
-  set_param xicom.use_bs_reader 1
+  set_param chipscope.maxJobs 2
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
@@ -132,15 +130,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.cache/wt [current_project]
-  set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.xpr [current_project]
-  set_property ip_output_repo C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.cache/wt [current_project]
+  set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.xpr [current_project]
+  set_property ip_output_repo C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.runs/synth_1/pong_top.dcp
+  add_files -quiet C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.runs/synth_1/pong_top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+  read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1744838363" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/ShiftReg.dcp">
-  <File Type="PA-TCL" Name="ShiftReg.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ShiftReg_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="ShiftReg_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ShiftReg.vds"/>
-  <File Type="RDS-UTIL" Name="ShiftReg_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ShiftReg_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ShiftReg.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ShiftReg_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ShiftReg_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1745209673">
+  <File Type="PA-TCL" Name="Transmitter.tcl"/>
+  <File Type="REPORTS-TCL" Name="Transmitter_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Transmitter.vds"/>
+  <File Type="RDS-UTIL" Name="Transmitter_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Transmitter_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Transmitter.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Counter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Mux_2_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ParodyFSM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ShiftReg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Transmitter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +45,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ShiftReg"/>
+      <Option Name="TopModule" Val="Transmitter"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -40,14 +65,6 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PSRCDIR/utils_1/imports/synth_1/ShiftReg.dcp">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedInSteps" Val="synth_1"/>
-        <Attr Name="AutoDcp" Val="1"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

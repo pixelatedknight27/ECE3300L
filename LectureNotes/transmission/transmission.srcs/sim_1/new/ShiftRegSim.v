@@ -25,7 +25,7 @@ module ShiftRegSim;
     reg reset = 0;
     reg clock = 0;
     reg load = 0;
-    reg [n-1:0] Qin = 8'h57;
+    reg [n-1:0] Qin = 8'hFF;
     wire [n-1:0] Qout;
     wire parody;
     

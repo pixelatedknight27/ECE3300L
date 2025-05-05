@@ -19,7 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module ShiftReg(reset, clk, load, Qin, Qout);
     parameter n = 8;
     input reset;
@@ -31,13 +30,9 @@ module ShiftReg(reset, clk, load, Qin, Qout);
     always @(posedge reset, posedge clk)
     begin
         if(reset)
-        begin
             Qout = 0;
-        end
         else if(load)
-        begin
             Qout = Qin;
-        end
         else
             Qout <= {0,Qout[n-1:1]};
     end

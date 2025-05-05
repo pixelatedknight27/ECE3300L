@@ -2,7 +2,11 @@
 2020.2
 Oct 13 2023
 20:47:58
-C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/sim_1/new/ShiftRegSim.v,1744838948,verilog,,,,ShiftRegSim,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ParodyFSM.v,1744838765,verilog,,C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ShiftReg.v,,ParodyFSM,,,,,,,,
-C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ShiftReg.v,1744837141,verilog,,C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/sim_1/new/ShiftRegSim.v,,ShiftReg,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.sim/sim_1/behav/xsim/glbl.v,1745198127,verilog,,,,glbl,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sim_1/new/ShiftRegSim.v,1745198127,verilog,,,,ShiftRegSim,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sim_1/new/TransmitterSim.v,1745216834,verilog,,,,TransmitterSim,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Counter.v,1745216393,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Mux_2_1.v,,Counter,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Mux_2_1.v,1745208400,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ParodyFSM.v,,Mux_2_1,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ParodyFSM.v,1745216724,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ShiftReg.v,,ParodyFSM,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ShiftReg.v,1745201473,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Transmitter.v,,ShiftReg,,,,,,,,
+C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Transmitter.v,1745216615,verilog,,C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sim_1/new/TransmitterSim.v,,Transmitter,,,,,,,,

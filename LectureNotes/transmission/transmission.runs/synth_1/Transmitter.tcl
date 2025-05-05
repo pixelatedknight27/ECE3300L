@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.runs/synth_1/ShiftReg.tcl"
+  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.runs/synth_1/Transmitter.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,15 +76,21 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.cache/wt [current_project]
-set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.cache/wt [current_project]
+set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.cache/ip [current_project]
+set_property ip_output_repo c:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ShiftReg.v
+read_verilog -library xil_defaultlib {
+  C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Counter.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Mux_2_1.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ParodyFSM.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/ShiftReg.v
+  C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/sources_1/new/Transmitter.v
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -94,16 +100,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc]
+read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/maxgr/Projects/Classes/ECE3300L/LectureNotes/transmission/transmission.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental C:/Users/maxgr/Documents/ECE3300L/LectureNotes/transmission/transmission.srcs/utils_1/imports/synth_1/ShiftReg.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top ShiftReg -part xc7a100tcsg324-1
+synth_design -top Transmitter -part xc7a100tcsg324-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -113,10 +117,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef ShiftReg.dcp
+write_checkpoint -force -noxdef Transmitter.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file ShiftReg_utilization_synth.rpt -pb ShiftReg_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file Transmitter_utilization_synth.rpt -pb Transmitter_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/maxgr/Documents/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/Lab11RoundBall/Lab11RoundBall.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9711c11321f54390afe7ec430093df23"/>
@@ -92,7 +92,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/Downloads/clk_50m_generator-1.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../Downloads/clk_50m_generator-1.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/clk_50m_generator-1.v"/>
           <Attr Name="ImportTime" Val="1744615404"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
