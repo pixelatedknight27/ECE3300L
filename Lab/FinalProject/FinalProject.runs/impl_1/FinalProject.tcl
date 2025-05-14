@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.runs/impl_1/FinalProject.tcl"
+  variable script "C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.runs/impl_1/FinalProject.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,7 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 4  }
 OPTRACE "create in-memory project" START { }
@@ -131,15 +131,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.cache/wt [current_project]
-  set_property parent.project_path C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.xpr [current_project]
-  set_property ip_output_repo C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.cache/wt [current_project]
+  set_property parent.project_path C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.xpr [current_project]
+  set_property ip_output_repo C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.runs/synth_1/FinalProject.dcp
+  add_files -quiet C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.runs/synth_1/FinalProject.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/maxgr/Projects/Classes/ECE3300L/Lab/FinalProject/FinalProject.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
+  read_xdc C:/Users/maxgr/Documents/ECE3300L/Lab/FinalProject/FinalProject.srcs/constrs_1/imports/xdcFiles/Nexys-A7-100T-Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

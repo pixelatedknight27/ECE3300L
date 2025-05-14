@@ -23,6 +23,7 @@
 module CordicAnim(
     input wire video_on,
     input wire [9:0] pix_x, pix_y,
+    input wire [7:0] scale,
     output reg [2:0] graph_rgb
 );
 
@@ -51,7 +52,7 @@ module CordicAnim(
     always @(*)
     begin
 
-        i = pix_x * 2;
+        i = pix_x * 2 * scale;
 
         mod_pix_x = i % 360;
 
